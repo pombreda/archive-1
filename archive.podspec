@@ -23,7 +23,7 @@ Supports Windows, including Cygwin, MinGW, and Visual Studio.
   s.homepage     = "http://www.libarchive.org"
   s.license      = 'BSD'
   s.author       = { "waTeim" => "truthset@gmail.com" }
-  s.source       = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
+  s.source       = { :git => "http://github.com/waTeim/archive.git", :tag => s.version.to_s }
 
   s.platform     = :osx, '10.6'
   s.requires_arc = false
