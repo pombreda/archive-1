@@ -6,31 +6,29 @@
 #
 Pod::Spec.new do |s|
   s.name         = "archive"
-  s.version      = "0.1.0"
-  s.summary      = "A short description of archive."
+  s.version      = "3.1.2"
+  s.summary      = "Multi-format archive and compression library"
   s.description  = <<-DESC
-                    An optional longer description of archive
+The libarchive library features:
 
-                    * Markdown format.
-                    * Don't worry about the indent, we strip it!
+Support for a variety of archive and compression formats ?.
+Robust automatic format detection ?, including archive/compression combinations such as tar.gz.
+Zero-copy internal architecture ? for high performance.
+Streaming architecture eliminates all limits on size of archive, limits on entry sizes depend on particular formats.
+Carefully factored code to minimize bloat when programs are statically linked.
+Growing test suite ? to verify correctness of new ports.
+Works on most POSIX-like systems (including FreeBSD, Linux, Solaris, etc.)
+Supports Windows, including Cygwin, MinGW, and Visual Studio.
                    DESC
-  s.homepage     = "http://EXAMPLE/NAME"
-  s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
-  s.license      = 'MIT'
+  s.homepage     = "http://www.libarchive.org"
+  s.license      = 'BSD'
   s.author       = { "waTeim" => "truthset@gmail.com" }
   s.source       = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
-  s.requires_arc = true
-
-  s.source_files = 'Classes'
-  s.resources = 'Assets'
-
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.platform     = :osx, '10.6'
+  s.requires_arc = false
+  s.vendored_libraries = 'lib/*.a'
+  s.source_files = 'include/*.h'
+  s.public_header_files = 'include/*.h'
+  s.preserve_paths = 'include'
 end
