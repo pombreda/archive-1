@@ -1,9 +1,3 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://docs.cocoapods.org/specification.html
-#
 Pod::Spec.new do |s|
   s.name         = "archive"
   s.version      = "3.1.2"
@@ -23,7 +17,7 @@ Supports Windows, including Cygwin, MinGW, and Visual Studio.
   s.homepage     = "http://www.libarchive.org"
   s.license      = 'BSD'
   s.author       = { "waTeim" => "truthset@gmail.com" }
-  s.source       = { :git => "http://github.com/waTeim/archive.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/waTeim/archive.git", :tag => s.version.to_s }
 
   s.platform     = :osx, '10.6'
   s.requires_arc = false
