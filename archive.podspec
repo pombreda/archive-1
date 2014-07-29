@@ -18,11 +18,11 @@ Supports Windows, including Cygwin, MinGW, and Visual Studio.
   s.license      = 'BSD'
   s.author       = { "waTeim" => "truthset@gmail.com" }
   s.source       = { :git => "https://github.com/waTeim/archive.git", :tag => s.version.to_s }
-
   s.platform     = :osx, '10.6'
   s.requires_arc = false
   s.vendored_libraries = 'lib/*.a'
-  s.source_files = 'include/*.h'
-  s.public_header_files = 'include/*.h'
+  s.private_header_files = s.source_files = 'include/*.h'
+  s.xcconfig = { 'HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)/archive/include"' }
   s.preserve_paths = 'include'
+  s.header_mappings_dir = 'include'
 end
